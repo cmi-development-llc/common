@@ -1,17 +1,17 @@
 emulate sh -c 'source ~/.bashrc'
-if ! [[ -a "${funcsourcetrace[1]%/*}/antigen.zsh" ]]
+if ! [[ -a ~/antigen.zsh ]]
 then
-    curl -L git.io/antigen > "${funcsourcetrace[1]%/*}/antigen.zsh"
+	echo "download"
+    curl -L git.io/antigen > ~/antigen.zsh
 fi
 # Use the path where you installed Antigen
-source "${funcsourcetrace[1]%/*}/antigen.zsh"
+source ~/antigen.zsh
 # Load Oh My Zsh
 antigen use oh-my-zsh
-# Example of how to add other useful things
-antigen bundle zsh-users/zsh-completions
+antigen theme borekb/agkozak-zsh-theme@prompt-customization
 antigen bundle git
-antigen bundle borekb/agkozak-zsh-theme@prompt-customization
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle aws
 antigen apply
+
 # Make /c/... autocompletion work, see Alexpux/MSYS2-packages#38
-zstyle ':completion:*' fake-files /: '/:c'
+zstyle ':completion:*' fake-files /: '/:c' '/:g'
