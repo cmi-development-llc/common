@@ -1,3 +1,4 @@
+#[[ $TERM != "screen" ]] && exec tmux
 alias c='clear'
 alias h='history'
 alias cs='clear;ls'
@@ -31,7 +32,7 @@ alias aws-cmi='export AWS_DEFAULT_PROFILE=cmi'
 alias ssh-cmi="ssh -i /g/My\ Drive/cmidev.pem"
 alias push="git push"
 # Let there be color in grep!
-export GREP_OPTIONS=' — color=auto'
+alias grep='grep —color=auto'
 force_color_prompt=yes
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
