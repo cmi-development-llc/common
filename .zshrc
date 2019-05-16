@@ -23,5 +23,5 @@ antigen apply
 
 # Make /c/... autocompletion work, see Alexpux/MSYS2-packages#38
 #zstyle ':completion:*' fake-files /: '/:c' '/:g'
-	
-export PATH=~/.local/bin:$PATH
+mypath=${0:a:h}
+export PATH=~/.local/bin:${mypath}:$PATH
