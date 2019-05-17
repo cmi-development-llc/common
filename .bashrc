@@ -36,3 +36,6 @@ alias grep='grep —color=auto'
 force_color_prompt=yes
 ## Colorize the ls output ##
 alias ls='ls --color=auto'
+
+alias install='sudo apt install -y'
+alias uninstall='sudo apt uninstall -y'
