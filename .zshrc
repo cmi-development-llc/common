@@ -8,7 +8,6 @@ emulate sh -c 'source ~/.bashrc'
 unsetopt BG_NICE
 if ! [[ -a ~/antigen.zsh ]]
 then
-	echo "download"
     curl -L git.io/antigen > ~/antigen.zsh
 fi
 AGKOZAK_LEFT_PROMPT_ONLY=1
@@ -21,7 +20,6 @@ antigen bundle git
 antigen bundle aws
 antigen apply
 
-# Make /c/... autocompletion work, see Alexpux/MSYS2-packages#38
-#zstyle ':completion:*' fake-files /: '/:c' '/:g'
 mypath=${0:a:h}
+# for aws cli
 export PATH=~/.local/bin:${mypath}:$PATH

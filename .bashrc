@@ -29,7 +29,8 @@ alias lg='git log'
 alias u='git add -u'
 alias all='git add .'
 alias aws-cmi='export AWS_DEFAULT_PROFILE=cmi'
-alias ssh-cmi="ssh -i /g/My\ Drive/cmidev.pem"
+alias ssh-cmi="ssh -i /g/cmidev.pem"
+alias ssh-exp="ssh -i /z/experimental-november.pem"
 alias push="git push"
 # Let there be color in grep!
 alias grep='grep —color=auto'
