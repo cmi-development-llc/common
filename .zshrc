@@ -12,6 +12,7 @@ source ~/antigen.zsh
 # Load Oh My Zsh
 antigen use oh-my-zsh
 antigen theme bhilburn/powerlevel9k
+antigen bundle lukechilds/zsh-nvm
 antigen bundle git
 antigen bundle aws
 antigen apply
